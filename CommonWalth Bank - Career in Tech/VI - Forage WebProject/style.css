@@ -1,0 +1,20 @@
+h1{
+  background-color: #182838;
+  padding: 10px;
+  text-align: center;
+  color: #a6d2ff;
+}
+body {
+  background-color: #cde2f7;
+}
+td{
+  text-align: center;
+  align-self: start;
+}
+table{
+  border: 3px;
+  border-color: #123456;
+}
+th{
+  text-align: center;
+}

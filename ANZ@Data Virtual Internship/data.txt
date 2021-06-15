@@ -1,0 +1,31 @@
+print(df.info())
+print(df.groupby('gender').mean())
+plt.style.use('ggplot')
+df.plot(
+    kind='scatter',
+    x='age',
+    y='amount',
+    c='#2ca02c'
+)
+df.plot(
+    kind='scatter',
+    x='gender',
+    y='amount',
+    c='#17becf'
+)
+plt.show()
+
+
+corr=df.corr().round(2)
+corr.to_excel("corr.xlsx")
+print("Dpne")
+
+X2=df[['age','balance']]
+Y=df['amount']
+X_tr,X_ts,Y_tr,Y_ts=train_test_split(X2,Y,test_size=0.3,random_state=1)
+model=LinearRegression()
+model.fit(X_tr,Y_tr)
+Y_predicted=model.predict(X_ts)
+
+print("A>> ",mean_squared_error(Y_ts,Y_predicted).round(2))
+print(model.score(X_ts,Y_ts))
