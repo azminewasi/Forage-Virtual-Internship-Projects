@@ -1,0 +1,21 @@
+Here is the background information on your task
+After having major success on the European market, the board of Fond Rouge, a shoe company from France, decides it is time to venture to the other side of the pond and take on North America's footwear industry.
+
+Initially, everything goes according to plan and they even manage to scale the retail locations faster than expected. In the optimism of this continuous progress, though, the company's business leads have missed an important trend that started to arise in their data. After the Marketing department of Fond Rouge noticed a stream of negative reviews online (primarily on social media) - they realised there is a problem.
+
+Today, you are in the meeting room with Fond Rouge's VP of BizDev and Head of Engineering. They believe there are counterfeit products of lesser quality interfering with the US sales and resulting in negative reviews online. Fond Rouge would like us to consult them on the best way to narrow the affected locations, identify the problem(s) and propose a solution.
+
+
+
+Here is your task
+Here is what your first task looks like:
+
+Setup a standard office package software. If you already have something like MS Office (Excel, Word & PPT), OpenOffice or LibreOffice installed - then you can skip this step. If not - please find a link to an installation guide for LibreOffice in the Resources section.
+Get acquainted with the most common data types clients like Fond Rouge would usually collect. In the Resources section below, you will find samples of several different types of data (these are only samples of the formats Fond Rouge stores data in, please don't try to solve the client's problem based only on this data).
+Sales - example for sales transaction
+Returns - example of order return transactions
+Sentiment - a score of 0-100 (0-64 is considered negative, 65-84 neutral, 85-100 positive) generated from a combination of the NPS the client measures + sentiment scores of public mentions on social media (like twitter)
+Server Errors - a sample of the server error log
+Determine what's the right data to help you troubleshoot the client's problem.
+Take a quiz to solidify your learnings.
+There may (or may not) be a way to combine multiple data sources for a better picture of the issue.
