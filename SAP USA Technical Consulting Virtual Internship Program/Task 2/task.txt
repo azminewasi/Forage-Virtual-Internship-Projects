@@ -1,0 +1,57 @@
+Here is the background information on your task
+Alright, here is the data we selected in the previous task:
+
+All Sales transactions
+All Returns of products
+The monthly Sentiment scores (based on NPS + social sentiment score), in every location, for every product
+The Head of Engineering of Fond Rouge has sent us the data in a .xlsx file with 3 sheets - Sales, Returns, Sentiment.
+
+Now it's time to analyze Fond Rouge's data in the SAP Analytics Cloud (SAC). SAC is a best-in-class SaaS solution that combines all the analytics functionalities (Planning, Predictive, Business Intelligence, and more) in one intuitive user interface, helping us save time & effort and make better decisions.
+
+Let's start by getting a free trial account. 
+
+Please note, you can use your personal email to sign up for Forage but for access to SAC, you'll need to use an educational or work email address. Personal email accounts are not permitted (gmail/Hotmail/outlook/etc).
+
+Find the link in the Resources section of the task.
+
+
+3
+Here is your task
+Your second task is to import the client's data into SAP Analytics Cloud and to analyze it.
+
+If you have no prior experience with SAP Analytics Cloud that's completely fine - aside of the "Getting Started with SAC" tutorial, make sure you get the Task Guide pdf attached in the Resources, too. It's a step-by-step guide with screenshots to help you navigate steps 3. and 4. + an example for the first item of 5.
+
+Here are the steps you need to take:
+
+Register an account using an educational or work email address (personal email accounts won't work with registration). Make sure to keep track of the Welcome email you receive with your login link.
+Get acquainted with the Resources:
+Download the Task Guide (.pdf) as well as Fond Rouge's data (.xlsx).
+Go through the Getting Started with SAP Analytics Cloud tutorial.
+Take a quick look at the rest of the web resources.
+Import Fond Rouge's data in a single Analytics Cloud model, combining data sources (start with the Sales sheet -> Returns -> Sentiment).
+add the Returns using the OrderID as a field to join on
+before adding the Sentiment - create a Year_Month column with yyyy/mm date format (extract it from the original Date column) AND create a Location_ID column from "{Country}, {City}". Make sure not to lose the Country and City columns (duplicate them before combining) as combining removes the originals. Add the Sentiment data, joining on Location_ID, Year_Month, ProductID.
+Perform a little bit of data wrangling before creating the model:
+assign Descriptions to ID columns (ProductID -> Product)
+create parent-child hierarchies (ProductID -> ProductCategoryName, City -> Country)
+enrich the geo data that's already in the model (use the Location_ID as an ID column, City as Description)
+merge the 2 Status columns to apply the returns (use the Replace smart transform on the main status column and add a "where" clause to check values from the other Status column
+delete the temp columns you needed for the combination of the 3 data sources - Product_2 and Status_2
+make sure all columns are of the correct type (e.g. Sentiment is a measure and not dimension)
+create computed columns Revenue and Refund
+generate the model
+Create a story with the following charts:
+[Column & Line] Revenue & Refund per country
+[Column] Refund/Revenue per country
+[Stacked Bar]  Revenue & Refund per US city
+[Column & Line] Refund/Revenue & Avg Sentiment per US city
+[Donut] Sentiment Class in the US
+[Donut] Sentiment Class Global
+[Column & Line] Revenue & Avg Sentiment per country
+[Column & Line] Refund/Revenue, Avg Sentiment per country
+[GeoMap with the 3 layers, BubleSize slider to 50% on all]
+- Location, BubleColor: Avg Sentiment, BubleSize: Revenue
+- Location, BubleColor: Revenue, BubleSize: Revenue
+- Location, BubleColor: Refunds, BubleSize: Refunds
+- Location, BubleColor: Avg Sentiment, BubleSize: Avg Sentiment
+Finally, fill out the questionnaire (located in the Resources section) and submit it.
